@@ -1,0 +1,50 @@
+.header-container {
+	width: 100%;
+	background: #2966D2;
+	height: 60px;
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+}
+
+.logo-content {
+	color: white;
+	align-items: center;
+	size: 60px;
+	width: auto;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 50px;
+
+	.fa-igloo {
+		font-size: 32px;
+	}
+
+	.logo-text {
+		font-size: 24px;
+		text-indent: 8px;
+		margin-top: 4px;
+	}
+}
+
+.header-features {
+	width: auto;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	margin-right: 50px;
+
+	.user {
+		font-weight: 600;
+	}
+
+	.fa-chevron-down {
+		text-indent: 8px;
+	}
+}

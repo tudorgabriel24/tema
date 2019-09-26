@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyCT18azOjGOtz452spepiTUvfszzOSCLMo",
+    authDomain: "sprybase-homework.firebaseapp.com",
+    databaseURL: "https://sprybase-homework.firebaseio.com",
+    projectId: "sprybase-homework",
+    storageBucket: "sprybase-homework.appspot.com",
+    messagingSenderId: "112699768215",
+    appId: "1:112699768215:web:6229ce6688571469ee98d2",
+    measurementId: "G-Q3X4PDX1XR"
+  }
 };
 
 /*

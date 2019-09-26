@@ -1,0 +1,23 @@
+<div class="header-container">
+	<div class="header-content">
+
+		<div class="logo-content">
+			<i class="fas fa-igloo"></i>
+			<span class="logo-text">Imobiliare</span>
+		</div>
+
+		<div class="header-features">
+			<span class="user">Tudor M.</span>
+			<div class="features-button">
+					<i class="fas fa-chevron-down" [matMenuTriggerFor]="menu"></i>
+				<mat-menu #menu="matMenu">
+					<button mat-menu-item>Add an apartment</button>
+					<button mat-menu-item>See all apartments</button>
+					<button mat-menu-item>See your apartments</button>
+					<button mat-menu-item>Log out</button>
+				</mat-menu>
+			</div>
+		</div>
+
+	</div>
+</div>
