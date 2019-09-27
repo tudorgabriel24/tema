@@ -1,9 +1,19 @@
 <div class="apartment-list">
-  <div
-    class="apartment-item"
-    *ngFor="let apartment of apartmentAds"
-  >
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
+  <div class="apartment-item" *ngFor="let apartment of apartmentList">
+    <mat-card class="card-item">
+      <div class="ad-image">
+          <img [src]="apartment.photos[1]" alt="">
+      </div>
+      <div class="ad-informations">
+        <h4 class="title">{{ apartment.title }}</h4>
+        <p class="ad-description">{{ apartment.description }}</p>
+        <mat-chip-list>
+          <mat-chip class="price">Price: {{ apartment.price }} &euro;</mat-chip>
+          <mat-chip class="rooms-number" selected>Rooms: {{ apartment.rooms_no }}</mat-chip>
+          <mat-chip class="phone-number" selected>Phone: {{ apartment.phone }}</mat-chip>
+        </mat-chip-list>
+      </div>
+    </mat-card>
   </div>
+
 </div>

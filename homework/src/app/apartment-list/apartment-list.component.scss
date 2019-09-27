@@ -1,0 +1,66 @@
+.apartment-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-item {
+	margin: 8px;
+	display: flex;
+	flex-direction: row;
+	opacity: 0.9;
+
+	&:hover {
+		opacity: 1;
+		cursor: pointer;
+	}
+
+	.ad-image {
+		width: 250px;
+
+		img {
+			max-width: 250px;
+			height: auto;
+			border-radius: 4px;
+		}
+	}
+
+	.ad-informations {
+		width: 75%;
+		display: flex;
+		flex-direction: column;
+		margin-left: 12px;
+		justify-content: space-between;
+	
+		.title {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			font-weight: 300;
+			font-size: 24px;
+		}
+
+		.ad-description {
+			font-size: 12px;
+			margin-top: 0px;
+			max-height: 50px;
+		}
+
+		.price {
+			background-color: rgb(26, 26, 26);
+			color: white;
+			font-size: 12px;
+		}
+
+		.rooms-number {
+			background-color: #2966D2;
+			font-size: 12px;
+		}
+
+		.phone-number {
+			background-color: #32CD32;
+			font-size: 12px;
+		}
+	}
+}
+

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { getLocaleTimeFormat } from '@angular/common';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
-import { Apartment } from '../../models/apartment.model';
+import { SELECT_ITEM_HEIGHT_EM } from '@angular/material';
 
 @Component({
   selector: 'app-apartment-list',
@@ -11,17 +12,21 @@ import { Apartment } from '../../models/apartment.model';
 })
 export class ApartmentListComponent implements OnInit {
 
-  public apartmentAds: Observable<any>;
-  public title: string;
-  public description: string;
+  public apartmentAds: Subscription;
+  public apartmentList: any;
 
   constructor(
     public data: AngularFireDatabase,
   ) { 
-    this.apartmentAds = data.list('apartments').valueChanges();
+    this.apartmentAds = data.list('apartments').valueChanges().subscribe( data => { 
+      this.apartmentList = data;
+      localStorage.setItem('apartmentList', JSON.stringify(this.apartmentList));
+    });
+
   }
 
   ngOnInit() {
+    console.log(localStorage.getItem('apartmentList'));
   }
 
 }

@@ -11,6 +11,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import {
   MatMenuModule,
+  MatCardModule,
+  MatChipsModule,
 } from '@angular/material';
 import { CommonModule } from '@angular/common';
 
@@ -29,6 +31,8 @@ import { CommonModule } from '@angular/common';
     CommonModule,
 
     MatMenuModule,
+    MatCardModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
