@@ -27,6 +27,7 @@ import {
 } from '@angular/material';
 import { UploadListComponent } from './upload-list/upload-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorComponent } from './error/error.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     AddApartmentDialogComponent,
     routingComponents,
     UploadListComponent,
+    ErrorComponent,
   ],
   entryComponents: [
     AddApartmentDialogComponent
