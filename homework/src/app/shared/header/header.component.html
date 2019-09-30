@@ -1,23 +1,33 @@
 <div class="header-container" color="primary">
-	<div class="header-content">
+  <div class="header-content">
+    <div class="logo-content">
+      <i class="fas fa-igloo"></i>
+      <span class="logo-text">Imobiliare</span>
+    </div>
 
-		<div class="logo-content">
-			<i class="fas fa-igloo"></i>
-			<span class="logo-text">Imobiliare</span>
-		</div>
-
-		<div class="header-features">
-			<span class="user">Tudor M.</span>
-			<div class="features-button">
-					<i class="fas fa-chevron-down" [matMenuTriggerFor]="menu"></i>
-				<mat-menu #menu="matMenu">
-					<button mat-menu-item>Add an apartment</button>
-					<button mat-menu-item>See all apartments</button>
-					<button mat-menu-item>See your apartments</button>
-					<button mat-menu-item>Log out</button>
-				</mat-menu>
-			</div>
-		</div>
-
-	</div>
+    <div class="header-features">
+      <span class="user">User</span>
+      <div class="features-button">
+        <i class="fas fa-chevron-down" [matMenuTriggerFor]="menu"></i>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="openDialog()">Add an apartment</button>
+          <button mat-menu-item>
+            <span>
+              <i class="fas fa-sign-out-alt"></i>
+            </span>
+            Log out
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+				<div class="add-apartment-on-phone">
+						<mat-icon
+							class="mat-icon material-icons mat-icon-no-color add-icon"
+							role="img"
+							aria-hidden="true"
+							(click)="openDialog()"
+							>add</mat-icon
+						>
+				</div>
+  </div>
 </div>

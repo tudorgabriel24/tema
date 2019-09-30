@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Roboto", Helvetica, sans-serif;
 }
 
 .card-item {
@@ -10,6 +10,7 @@
 	display: flex;
 	flex-direction: row;
 	opacity: 0.9;
+
 
 	&:hover {
 		opacity: 1;
@@ -21,6 +22,7 @@
 
 		img {
 			max-width: 250px;
+
 			height: auto;
 			border-radius: 4px;
 		}
@@ -30,20 +32,22 @@
 		width: 75%;
 		display: flex;
 		flex-direction: column;
-		margin-left: 12px;
-		justify-content: space-between;
+		margin-left: 12px;	
+		word-break: break-all;
 	
 		.title {
-			margin-top: 0px;
+			margin-top: 4px;
 			margin-bottom: 0px;
 			font-weight: 300;
 			font-size: 24px;
+
+			max-height: 100px;
 		}
 
 		.ad-description {
 			font-size: 12px;
-			margin-top: 0px;
-			max-height: 50px;
+			margin: 20px 0px;
+			max-height: 200px;
 		}
 
 		.price {
@@ -60,7 +64,67 @@
 		.phone-number {
 			background-color: #32CD32;
 			font-size: 12px;
+			color: white;
+			.fa-phone-alt {
+				margin-right: 4px;
+			}
+		}
+
+		.address {
+			font-size: 12px;
+
+			.fa-map-marker-alt {
+				margin-right: 4px;
+			}
+		}
+		.informations-list {
+			align-self: flex-end;
+			bottom: 0;
+			position: sticky;
+			margin-bottom: 12px;
+
 		}
 	}
 }
 
+@media only screen and (max-width: 610px) {
+	.card-item {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		.ad-image {
+			width: 100%;
+			img {
+				max-width: 100%;
+	
+				height: auto;
+				border-radius: 4px;
+			}
+		}
+
+		.ad-informations {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin-left: 12px;
+		justify-content: space-between;
+		position: relative;
+		}
+	}
+}
+
+@media only screen and (min-width: 611px) {
+	.card-item {
+
+		.ad-informations {
+			position: relative;
+
+			.informations-list {
+				position: absolute;
+				right: 8px;
+				bottom: 0;
+				}
+		}
+	
+	}
+}

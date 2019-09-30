@@ -5,12 +5,21 @@
           <img [src]="apartment.photos[1]" alt="">
       </div>
       <div class="ad-informations">
-        <h4 class="title">{{ apartment.title }}</h4>
-        <p class="ad-description">{{ apartment.description }}</p>
-        <mat-chip-list>
+        <h4 class="title">{{ (apartment.title.length>50)? (apartment.title | slice:0:50)+'...':(apartment.title) }}</h4>
+
+        <p class="ad-description">{{ (apartment.description.length>200)? (apartment.description | slice:0:200)+'...':(apartment.description) }}</p>
+
+        <mat-chip-list class="informations-list">
           <mat-chip class="price">Price: {{ apartment.price }} &euro;</mat-chip>
-          <mat-chip class="rooms-number" selected>Rooms: {{ apartment.rooms_no }}</mat-chip>
-          <mat-chip class="phone-number" selected>Phone: {{ apartment.phone }}</mat-chip>
+          <mat-chip class="rooms-number" selected>Rooms: {{ apartment.roomsNo }}</mat-chip>
+          <mat-chip class="address">
+            <i class="fas fa-map-marker-alt"></i>
+            {{ apartment.address }}
+          </mat-chip>
+          <mat-chip class="phone-number">
+            <i class="fas fa-phone-alt"></i>
+            {{ apartment.phone }}
+          </mat-chip>
         </mat-chip-list>
       </div>
     </mat-card>

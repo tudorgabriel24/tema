@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ApartmentListComponent } from './apartment-list/apartment-list.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -15,4 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ ApartmentListComponent, ]
+export const routingComponents = [ ApartmentListComponent ]
