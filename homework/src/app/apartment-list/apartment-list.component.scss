@@ -19,11 +19,11 @@
 
 	.ad-image {
 		width: 250px;
-
+		display: flex;
 		img {
 			max-width: 250px;
-
 			height: auto;
+			justify-content: space-around;
 			border-radius: 4px;
 		}
 	}
@@ -80,7 +80,6 @@
 		.informations-list {
 			align-self: flex-end;
 			bottom: 0;
-			position: sticky;
 			margin-bottom: 12px;
 
 		}
@@ -108,7 +107,6 @@
 		flex-direction: column;
 		margin-left: 12px;
 		justify-content: space-between;
-		position: relative;
 		}
 	}
 }

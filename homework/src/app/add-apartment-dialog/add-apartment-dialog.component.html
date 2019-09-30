@@ -111,7 +111,7 @@
       mat-button
       mat-raised-button
       mat-dialog-close
-      (submit)="uploadFiles()"
+      (click)="uploadFiles()"
       color="primary"
       [disabled] = "form.controls['title' && 'description' && 'address' && 'phone' && 'price' && 'roomsNo'].invalid"
     >

@@ -20,25 +20,20 @@ export class AddApartmentDialogComponent implements OnInit {
   public currentUpload: Upload;
   public selectedFiles: File[] = [];
   public downloadURLs: string[] = [];
-  public selectedFilesName: string[] = [];
+  public selectedFilesName: string[];
+
   public form : FormGroup;
   public uploadedFileCounter: number;
-
-
-  public address: string = '';
-  public addedDate: string = this.datePipe.transform(this.currentDate, "dd/MM/yyyy");
-  public description: string = '';
-  public phone: string = '';
-  public photos: FileList[] = [];
-  public price: number = 0;
-  public roomsNumber: number = 0;
-  public title: string = '';
 
   constructor(
     private datePipe: DatePipe,
     private afStorage: AngularFireStorage,
     private fb: FormBuilder,
   ) {
+    this.selectedFilesName = [];
+    this.selectedFiles = [];
+    this.downloadURLs = [];
+
     this.form = this.fb.group({
       addedDate: this.datePipe.transform(new Date(), 'dd/MM/yyyy'),
       address: ['', Validators.required],
@@ -60,6 +55,8 @@ export class AddApartmentDialogComponent implements OnInit {
 
     const file: File = event.target.files[0];
     this.selectedFiles.push(event.target.files[0]);
+    console.log(this.selectedFiles);
+    console.log('test',this.form.value);
     this.selectedFilesName.push(file.name);
   }
 
@@ -69,6 +66,7 @@ export class AddApartmentDialogComponent implements OnInit {
     {
       this.form.value.photos.push(this.downloadURLs[index]);
     }
+    console.log(this.form.value);
       firebase.database().ref('/apartments').push(this.form.value);
   }
 
